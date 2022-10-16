@@ -70,7 +70,7 @@
 			text-align: center;
 			width: 9rem;
 			font-size: 0.85rem;
-			padding: 0.7rem 0.5rem;
+			padding: 0.5rem 0.5rem;
 			border-radius: 4.5rem;
 			border: 2px solid var(--general-color);
 			transition: background-color .50s, color .50s;
