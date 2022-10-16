@@ -1,0 +1,137 @@
+		/*General stylings*/
+
+		@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Lexend Deca', sans-serif;
+		}
+
+		:root {
+			--bright-orange: rgb(227, 136, 38);
+			--dark-cyan: rgb(0, 105, 112);
+			--very-dark-cyan: rgb(0, 66, 65);
+
+			--p-color: rgba(255, 255, 255, 0.75);
+			--general-color: rgb(242, 242, 242);
+		}
+
+		body {
+			min-height: 100vh;
+			background-color: var(--general-color);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		/*Typography*/
+
+		h2 {
+			font-family: 'Big Shoulders Display', cursive;
+			color: var(--general-color);
+			font-size: clamp(1rem, 1.5rem + 1vh, 2rem);
+			font-weight: 800;
+			margin: 1.5rem 0rem 1.5rem 0rem;
+			text-transform: uppercase;
+		}
+
+		.cards p {
+			padding: 0;
+		}
+
+		p {
+			font-size: clamp(0.5rem, 0.5rem + 1vh, 0.9rem);
+			color: var(--p-color);
+		}
+
+		/*Layout*/
+
+		.flex-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-flow: row wrap;
+			flex: 1 1 1fr;
+			max-width: 50rem;
+		}
+
+		.card {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			min-height: 25rem;
+			max-height: 30rem;
+			padding: 2rem;
+			flex: 1 1 33.33%;
+		}
+
+		.btn{
+			background-color: var(--general-color);
+			text-decoration: none;
+			display: block;
+			text-align: center;
+			width: 9rem;
+			font-size: 0.85rem;
+			padding: 1rem 1rem;
+			border-radius: 4.5rem;
+			border: 2px solid var(--general-color);
+			transition: background-color .50s, color .50s;
+			margin-top: 5rem;
+		}
+
+		/*Personal class styling*/
+
+		.sedans > .btn {
+			color: var(--bright-orange);
+		}
+
+		.sedans > .btn:hover , .suvs > .btn:hover , .luxury > .btn:hover {
+			background-color: transparent;
+			color: var(--general-color);
+		}
+
+		.suvs > .btn {
+			color: var(--dark-cyan);
+		}
+
+		.luxury > .btn {
+			color: var(--very-dark-cyan);
+		}
+
+		.sedans {
+			background-color: var(--bright-orange);
+			border-radius: 0.5rem 0rem 0rem 0.5rem;
+		}
+
+		.suvs {
+			background-color: var(--dark-cyan);
+		}
+
+		.luxury {
+			background-color: var(--very-dark-cyan);
+			border-radius: 0rem 0.5rem 0.5rem 0rem;
+		}
+
+		/*Responsive*/
+
+		@media(max-width: 720px) {
+			.flex-container {
+				flex-flow: column wrap;
+				flex: 1 1;
+				max-width: 20rem;
+			}
+
+			.card {
+				min-height: 25rem;
+			}
+
+			.sedans {
+				border-radius: 0.5rem 0.5rem 0rem 0rem;
+			}
+
+			.luxury {
+				border-radius: 0rem 0rem 0.5rem 0.5rem;
+			}
+		}
