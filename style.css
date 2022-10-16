@@ -50,7 +50,7 @@
 			justify-content: center;
 			align-items: center;
 			flex-flow: row wrap;
-			flex: 1 1 33.33%;
+			flex: 1 0 33.33%;
 			max-width: 55rem;
 		}
 
@@ -60,7 +60,7 @@
 			justify-content: flex-start;
 			min-height: 25rem;
 			padding: 2rem;
-			flex: 1 1 33.33%;
+			flex: 1 0 33.33%;
 		}
 
 		.btn{
