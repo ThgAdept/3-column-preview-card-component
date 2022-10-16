@@ -40,7 +40,7 @@
 		p {
 			font-size: clamp(0.5rem, 0.5rem + 1vh, 0.9rem);
 			color: var(--p-color);
-			line-height: 2rem;
+			line-height: 1.6rem;
 		}
 
 		/*Layout*/
